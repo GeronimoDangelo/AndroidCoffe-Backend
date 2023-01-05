@@ -21,23 +21,41 @@ class BookRepositoryImpl : BookRepository {
             id = 1,
             name = "Variables",
             image = "/images/variables.png",
-            about = "They are the names you give to computer memory locations which are used to store values in a computer program and later you use those names to retrieve the stored values and use them in your program.",
+            about = "A local variable is defined using the keyword val. \u2028They can be assigned a value only once. \n" +
+                    " val a = 1\n" +
+                    " val a = 4 // X , cannot be re-assigned\u2028\n" +
+                    "Variables that can be reassigned use the var keyword.\n" +
+                    "var x = 5\n" +
+                    "var name = “kotlin”\n" +
+                    "name = “android”\n" +
+                    "\n" +
+                    "var x =7 // correct, it can be re-assigned",
             rating = 5.0,
             month = "July",
             day = "23rd",
             tags = listOf(
-                "Fugaku",
-                "Mikoto",
-                "Itachi",
-                "Sarada",
-                "Sakura"
+                "val",
+                "var",
+                "const val",
+                "const var",
+                "private val",
+                "private var"
             ),
         ),
         Book(
             id = 2,
             name = "Coroutines",
             image = "/images/coroutines.png",
-            about = "A coroutine is a concurrency design pattern that you can use on Android to simplify code that executes asynchronously",
+            about = "A coroutine is a concurrency design pattern that you can use on Android to simplify code that executes asynchronously." +
+                    "For example: " +
+                    "fun main() = runBlocking {" +
+                    "   launch {" +
+                    "       delay(1000)" +
+                    "       println('World')" +
+                    "     }" +
+                    "   println('Hello')" +
+                    "In this case, we first start running the block and after 1 second it's going to say 'World', meanwhile the coroutine scope is running the code below ('Hello') is printing first and 1 second later the 'World'",
+
             rating = 5.0,
             month = "Oct",
             day = "10th",
@@ -98,7 +116,7 @@ class BookRepositoryImpl : BookRepository {
         Book(
             id = 6,
             name = "Data Class",
-            image = "/images/dataclass.jpg",
+            image = "/images/dataclass.png",
             about = "It is not unusual to create classes whose main purpose is to hold data. In such classes, some standard functionality and some utility functions are often mechanically derivable from the data. In Kotlin, these are called data classes and are marked with data",
             rating = 4.9,
             month = "Jul",
@@ -113,7 +131,7 @@ class BookRepositoryImpl : BookRepository {
         Book(
             id = 7,
             name = "Extensions",
-            image = "/images/extensions.jpg",
+            image = "/images/extensions.png",
             about = "Kotlin provides the ability to extend a class or an interface with new functionality without having to inherit from the class or use design patterns such as Decorator. This is done via special declarations called extensions. ",
             rating = 4.2,
             month = "Jan",
@@ -139,7 +157,7 @@ class BookRepositoryImpl : BookRepository {
         Book(
             id = 9,
             name = "Objects",
-            image = "/images/objects.jpg",
+            image = "/images/objects.png",
             about = "Kakashi Hatake (はたけカカシ, Hatake Kakashi) is a shinobi of Konohagakure's Hatake clan. Famed as Kakashi of the Sharingan (写輪眼のカカシ, Sharingan no Kakashi), he is one of Konoha's most talented ninja, regularly looked to for advice and leadership despite his personal dislike of responsibility. To his students on Team 7, Kakashi emphasises the importance of teamwork; he himself received this lesson, along with the Sharingan, from his childhood friend, Obito Uchiha.",
             rating = 4.5,
             month = "Sep",

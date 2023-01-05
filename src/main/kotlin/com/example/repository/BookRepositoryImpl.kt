@@ -20,7 +20,7 @@ class BookRepositoryImpl : BookRepository {
         Book(
             id = 1,
             name = "Variables",
-            image = "/images/variables.svg",
+            image = "/images/variables.png",
             about = "They are the names you give to computer memory locations which are used to store values in a computer program and later you use those names to retrieve the stored values and use them in your program.",
             rating = 5.0,
             month = "July",
@@ -69,7 +69,7 @@ class BookRepositoryImpl : BookRepository {
         Book(
             id = 4,
             name = "Sealed classes",
-            image = "/images/sealed_clases.svg",
+            image = "/images/sealed_clases.png",
             about = "Sealed classes and interfaces represent restricted class hierarchies that provide more control over inheritance. All direct subclasses of a sealed class are known at compile time. No other subclasses may appear outside a module within which the sealed class is defined",
             rating = 4.9,
             month = "Mar",

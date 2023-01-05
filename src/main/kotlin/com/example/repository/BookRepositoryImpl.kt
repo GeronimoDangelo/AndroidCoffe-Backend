@@ -70,7 +70,7 @@ class BookRepositoryImpl : BookRepository {
         Book(
             id = 3,
             name = "Flows",
-            image = "/images/flows.jpg",
+            image = "/images/flows.png",
             about = "In coroutines, a flow is a type that can emit multiple values sequentially, as opposed to suspend functions that return only a single value. For example, you can use a flow to receive live updates from a database.",
             rating = 4.5,
             month = "Mar",
@@ -103,7 +103,7 @@ class BookRepositoryImpl : BookRepository {
         Book(
             id = 5,
             name = "Interfaces",
-            image = "/images/interface.jpg",
+            image = "/images/interface.png",
             about = "in Kotlin can contain declarations of abstract methods, as well as method implementations. What makes them different from abstract classes is that interfaces cannot store state. They can have properties, but these need to be abstract or provide accessor implementations.",
             rating = 4.9,
             month = "Mar",
@@ -143,7 +143,7 @@ class BookRepositoryImpl : BookRepository {
         Book(
             id = 8,
             name = "Constructors",
-            image = "/images/constructors.jpg",
+            image = "/images/constructors.png",
             about = "A Kotlin constructor is a special member function in a class that is invoked when an object is instantiated. Whenever an object is created, the defined constructor is called automatically which is used to initialize the properties of the class.",
             rating = 4.5,
             month = "Oct",

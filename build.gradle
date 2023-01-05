@@ -1,0 +1,55 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '1.8.0'
+    id 'io.ktor.plugin' version '2.2.2'
+    id 'org.jetbrains.kotlin.plugin.serialization' version '1.8.0'
+}
+
+group "com.example"
+version "0.0.1"
+mainClassName = "io.ktor.server.netty.EngineMain"
+
+def isDevelopment = project.ext.has("development")
+applicationDefaultJvmArgs = ["-Dio.ktor.development=$isDevelopment"]
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    /*implementation "io.ktor:ktor-server-content-negotiation-jvm:$ktor_version"
+    implementation "io.ktor:ktor-server-core-jvm:$ktor_version"
+    implementation "io.ktor:ktor-serialization-kotlinx-json-jvm:$ktor_version"
+    implementation "io.ktor:ktor-server-call-logging-jvm:$ktor_version"
+    implementation "io.ktor:ktor-server-netty-jvm:$ktor_version"
+    implementation "ch.qos.logback:logback-classic:$logback_version"
+    testImplementation "io.ktor:ktor-server-tests-jvm:$ktor_version"
+    testImplementation "org.jetbrains.kotlin:kotlin-test-junit:$kotlin_version"*/
+
+    implementation"io.ktor:ktor-server-core:$ktorVersion"
+    implementation"io.ktor:ktor-serialization-kotlinx-json:$ktorVersion"
+    implementation"io.ktor:ktor-server-netty:$ktorVersion"
+    implementation"ch.qos.logback:logback-classic:$logbackVersion"
+
+    implementation"io.ktor:ktor-server-call-logging:$ktorVersion"
+    implementation"io.ktor:ktor-server-status-pages:$ktorVersion"
+    implementation"io.ktor:ktor-server-content-negotiation:$ktorVersion"
+    implementation"io.ktor:ktor-server-default-headers:$ktorVersion"
+
+    testImplementation"io.ktor:ktor-server-tests:$ktorVersion"
+    testImplementation"org.jetbrains.kotlin:kotlin-test:$kotlinVersion"
+
+    implementation"io.insert-koin:koin-ktor:$koinVersion"
+    implementation"io.insert-koin:koin-logger-slf4j:$koinVersion"
+
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0"
+}
+
+task fatJar(type: Jar) {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+
+    manifest {
+        attributes 'Main-Class': mainClassName
+    }
+    from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+    with jar
+}

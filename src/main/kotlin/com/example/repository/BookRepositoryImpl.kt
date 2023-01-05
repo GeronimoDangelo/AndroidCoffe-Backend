@@ -30,7 +30,7 @@ class BookRepositoryImpl : BookRepository {
                     "name = “android”\n" +
                     "\n" +
                     "var x =7 // correct, it can be re-assigned",
-            rating = 5.0,
+            rating = 1.0,
             month = "July",
             day = "23rd",
             tags = listOf(
@@ -72,7 +72,7 @@ class BookRepositoryImpl : BookRepository {
             name = "Flows",
             image = "/images/flows.png",
             about = "In coroutines, a flow is a type that can emit multiple values sequentially, as opposed to suspend functions that return only a single value. For example, you can use a flow to receive live updates from a database.",
-            rating = 4.5,
+            rating = 5.0,
             month = "Mar",
             day = "28th",
             tags = listOf(
@@ -89,7 +89,7 @@ class BookRepositoryImpl : BookRepository {
             name = "Sealed classes",
             image = "/images/sealed_clases.png",
             about = "Sealed classes and interfaces represent restricted class hierarchies that provide more control over inheritance. All direct subclasses of a sealed class are known at compile time. No other subclasses may appear outside a module within which the sealed class is defined",
-            rating = 4.9,
+            rating = 3.5,
             month = "Mar",
             day = "27th",
             tags = listOf(
@@ -118,7 +118,7 @@ class BookRepositoryImpl : BookRepository {
             name = "Data Class",
             image = "/images/dataclass.png",
             about = "It is not unusual to create classes whose main purpose is to hold data. In such classes, some standard functionality and some utility functions are often mechanically derivable from the data. In Kotlin, these are called data classes and are marked with data",
-            rating = 4.9,
+            rating = 2.7,
             month = "Jul",
             day = "25th",
             tags = listOf(
@@ -133,7 +133,7 @@ class BookRepositoryImpl : BookRepository {
             name = "Extensions",
             image = "/images/extensions.png",
             about = "Kotlin provides the ability to extend a class or an interface with new functionality without having to inherit from the class or use design patterns such as Decorator. This is done via special declarations called extensions. ",
-            rating = 4.2,
+            rating = 4.5,
             month = "Jan",
             day = "1st",
             tags = listOf(
@@ -145,7 +145,7 @@ class BookRepositoryImpl : BookRepository {
             name = "Constructors",
             image = "/images/constructors.png",
             about = "A Kotlin constructor is a special member function in a class that is invoked when an object is instantiated. Whenever an object is created, the defined constructor is called automatically which is used to initialize the properties of the class.",
-            rating = 4.5,
+            rating = 1.5,
             month = "Oct",
             day = "27th",
             tags = listOf(
@@ -159,7 +159,7 @@ class BookRepositoryImpl : BookRepository {
             name = "Objects",
             image = "/images/objects.png",
             about = "Kakashi Hatake (はたけカカシ, Hatake Kakashi) is a shinobi of Konohagakure's Hatake clan. Famed as Kakashi of the Sharingan (写輪眼のカカシ, Sharingan no Kakashi), he is one of Konoha's most talented ninja, regularly looked to for advice and leadership despite his personal dislike of responsibility. To his students on Team 7, Kakashi emphasises the importance of teamwork; he himself received this lesson, along with the Sharingan, from his childhood friend, Obito Uchiha.",
-            rating = 4.5,
+            rating = 0.5,
             month = "Sep",
             day = "15th",
             tags = listOf(

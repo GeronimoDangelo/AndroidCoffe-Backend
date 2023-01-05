@@ -69,7 +69,7 @@ class BookRepositoryImpl : BookRepository {
         Book(
             id = 4,
             name = "Sealed classes",
-            image = "/images/sealed_c-lases.jpg",
+            image = "/images/sealed_clases.jpg",
             about = "Sealed classes and interfaces represent restricted class hierarchies that provide more control over inheritance. All direct subclasses of a sealed class are known at compile time. No other subclasses may appear outside a module within which the sealed class is defined",
             rating = 4.9,
             month = "Mar",

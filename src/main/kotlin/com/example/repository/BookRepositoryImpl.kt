@@ -21,23 +21,41 @@ class BookRepositoryImpl : BookRepository {
             id = 1,
             name = "Variables",
             image = "/images/variables.png",
-            about = "They are the names you give to computer memory locations which are used to store values in a computer program and later you use those names to retrieve the stored values and use them in your program.",
+            about = "A local variable is defined using the keyword val. \u2028They can be assigned a value only once. \n" +
+                    " val a = 1\n" +
+                    " val a = 4 // X , cannot be re-assigned\u2028\n" +
+                    "Variables that can be reassigned use the var keyword.\n" +
+                    "var x = 5\n" +
+                    "var name = “kotlin”\n" +
+                    "name = “android”\n" +
+                    "\n" +
+                    "var x =7 // correct, it can be re-assigned",
             rating = 5.0,
             month = "July",
             day = "23rd",
             tags = listOf(
-                "Fugaku",
-                "Mikoto",
-                "Itachi",
-                "Sarada",
-                "Sakura"
+                "val",
+                "var",
+                "const val",
+                "const var",
+                "private val",
+                "private var"
             ),
         ),
         Book(
             id = 2,
             name = "Coroutines",
             image = "/images/coroutines.png",
-            about = "A coroutine is a concurrency design pattern that you can use on Android to simplify code that executes asynchronously",
+            about = "A coroutine is a concurrency design pattern that you can use on Android to simplify code that executes asynchronously." +
+                    "For example: " +
+                    "fun main() = runBlocking {" +
+                    "   launch {" +
+                    "       delay(1000)" +
+                    "       println('World')" +
+                    "     }" +
+                    "   println('Hello')" +
+                    "In this case, we first start running the block and after 1 second it's going to say 'World', meanwhile the coroutine scope is running the code below ('Hello') is printing first and 1 second later the 'World'",
+
             rating = 5.0,
             month = "Oct",
             day = "10th",

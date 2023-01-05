@@ -36,7 +36,7 @@ class BookRepositoryImpl : BookRepository {
         Book(
             id = 2,
             name = "Coroutines",
-            image = "/images/coroutines.jpg",
+            image = "/images/coroutines.png",
             about = "A coroutine is a concurrency design pattern that you can use on Android to simplify code that executes asynchronously",
             rating = 5.0,
             month = "Oct",

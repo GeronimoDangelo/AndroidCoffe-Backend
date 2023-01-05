@@ -98,7 +98,7 @@ class BookRepositoryImpl : BookRepository {
         Book(
             id = 6,
             name = "Data Class",
-            image = "/images/dataclass.jpg",
+            image = "/images/dataclass.png",
             about = "It is not unusual to create classes whose main purpose is to hold data. In such classes, some standard functionality and some utility functions are often mechanically derivable from the data. In Kotlin, these are called data classes and are marked with data",
             rating = 4.9,
             month = "Jul",
@@ -113,7 +113,7 @@ class BookRepositoryImpl : BookRepository {
         Book(
             id = 7,
             name = "Extensions",
-            image = "/images/extensions.jpg",
+            image = "/images/extensions.png",
             about = "Kotlin provides the ability to extend a class or an interface with new functionality without having to inherit from the class or use design patterns such as Decorator. This is done via special declarations called extensions. ",
             rating = 4.2,
             month = "Jan",
@@ -139,7 +139,7 @@ class BookRepositoryImpl : BookRepository {
         Book(
             id = 9,
             name = "Objects",
-            image = "/images/objects.jpg",
+            image = "/images/objects.png",
             about = "Kakashi Hatake (はたけカカシ, Hatake Kakashi) is a shinobi of Konohagakure's Hatake clan. Famed as Kakashi of the Sharingan (写輪眼のカカシ, Sharingan no Kakashi), he is one of Konoha's most talented ninja, regularly looked to for advice and leadership despite his personal dislike of responsibility. To his students on Team 7, Kakashi emphasises the importance of teamwork; he himself received this lesson, along with the Sharingan, from his childhood friend, Obito Uchiha.",
             rating = 4.5,
             month = "Sep",

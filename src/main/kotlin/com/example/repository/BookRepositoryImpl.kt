@@ -21,23 +21,14 @@ class BookRepositoryImpl : BookRepository {
             id = 1,
             name = "Variables",
             image = "/images/variables.png",
-            about = "A local variable is defined using the keyword val. \u2028They can be assigned a value only once. \n" +
-                    " val a = 1\n" +
-                    " val a = 4 // X , cannot be re-assigned\u2028\n" +
-                    "Variables that can be reassigned use the var keyword.\n" +
-                    "var x = 5\n" +
-                    "var name = “kotlin”\n" +
-                    "name = “android”\n" +
-                    "\n" +
-                    "var x =7 // correct, it can be re-assigned",
-            rating = 1.0,
-            month = "July",
-            day = "23rd",
+            about = "Kotlin uses two different keywords to declare variables ( val and var). Use val for a variable whose value never changes. You can't reassign a value to a variable that was declared using val. And you can use var for a variable whose value can change.",
+            rating = 0.5,
+            level = "Beginner",
+            timeToLearn = "Fast",
             tags = listOf(
                 "val",
                 "var",
                 "const val",
-                "const var",
                 "private val",
                 "private var"
             ),
@@ -57,8 +48,8 @@ class BookRepositoryImpl : BookRepository {
                     "In this case, we first start running the block and after 1 second it's going to say 'World', meanwhile the coroutine scope is running the code below ('Hello') is printing first and 1 second later the 'World'",
 
             rating = 5.0,
-            month = "Oct",
-            day = "10th",
+            level = "Oct",
+            timeToLearn = "10th",
             tags = listOf(
                 "Minato",
                 "Kushina",
@@ -73,8 +64,8 @@ class BookRepositoryImpl : BookRepository {
             image = "/images/flows.png",
             about = "In coroutines, a flow is a type that can emit multiple values sequentially, as opposed to suspend functions that return only a single value. For example, you can use a flow to receive live updates from a database.",
             rating = 5.0,
-            month = "Mar",
-            day = "28th",
+            level = "Mar",
+            timeToLearn = "28th",
             tags = listOf(
                 "Kizashi",
                 "Mebuki",
@@ -90,8 +81,8 @@ class BookRepositoryImpl : BookRepository {
             image = "/images/sealed_clases.png",
             about = "Sealed classes and interfaces represent restricted class hierarchies that provide more control over inheritance. All direct subclasses of a sealed class are known at compile time. No other subclasses may appear outside a module within which the sealed class is defined",
             rating = 3.5,
-            month = "Mar",
-            day = "27th",
+            level = "Mar",
+            timeToLearn = "27th",
             tags = listOf(
                 "Naruto",
                 "Hinata",
@@ -106,8 +97,8 @@ class BookRepositoryImpl : BookRepository {
             image = "/images/interface.png",
             about = "in Kotlin can contain declarations of abstract methods, as well as method implementations. What makes them different from abstract classes is that interfaces cannot store state. They can have properties, but these need to be abstract or provide accessor implementations.",
             rating = 4.9,
-            month = "Mar",
-            day = "31st",
+            level = "Mar",
+            timeToLearn = "31st",
             tags = listOf(
                 "Sasuke Uchiha",
                 "Sakura Uchiha"
@@ -119,8 +110,8 @@ class BookRepositoryImpl : BookRepository {
             image = "/images/dataclass.png",
             about = "It is not unusual to create classes whose main purpose is to hold data. In such classes, some standard functionality and some utility functions are often mechanically derivable from the data. In Kotlin, these are called data classes and are marked with data",
             rating = 2.7,
-            month = "Jul",
-            day = "25th",
+            level = "Jul",
+            timeToLearn = "25th",
             tags = listOf(
                 "Orochimaru",
                 "Log"
@@ -134,8 +125,8 @@ class BookRepositoryImpl : BookRepository {
             image = "/images/extensions.png",
             about = "Kotlin provides the ability to extend a class or an interface with new functionality without having to inherit from the class or use design patterns such as Decorator. This is done via special declarations called extensions. ",
             rating = 4.5,
-            month = "Jan",
-            day = "1st",
+            level = "Jan",
+            timeToLearn = "1st",
             tags = listOf(
                 "Kokatsu"
             ),
@@ -146,8 +137,8 @@ class BookRepositoryImpl : BookRepository {
             image = "/images/constructors.png",
             about = "A Kotlin constructor is a special member function in a class that is invoked when an object is instantiated. Whenever an object is created, the defined constructor is called automatically which is used to initialize the properties of the class.",
             rating = 1.5,
-            month = "Oct",
-            day = "27th",
+            level = "Oct",
+            timeToLearn = "27th",
             tags = listOf(
                 "Mitsuki",
                 "Log"
@@ -160,8 +151,8 @@ class BookRepositoryImpl : BookRepository {
             image = "/images/objects.png",
             about = "Kakashi Hatake (はたけカカシ, Hatake Kakashi) is a shinobi of Konohagakure's Hatake clan. Famed as Kakashi of the Sharingan (写輪眼のカカシ, Sharingan no Kakashi), he is one of Konoha's most talented ninja, regularly looked to for advice and leadership despite his personal dislike of responsibility. To his students on Team 7, Kakashi emphasises the importance of teamwork; he himself received this lesson, along with the Sharingan, from his childhood friend, Obito Uchiha.",
             rating = 0.5,
-            month = "Sep",
-            day = "15th",
+            level = "Sep",
+            timeToLearn = "15th",
             tags = listOf(
                 "Sakumo"
             ),

@@ -26,7 +26,8 @@ class BookRepositoryImpl : BookRepository {
             level = "Beginner",
             timeToLearn = "Fast",
             tags = listOf(
-                "val, var, private val, private var, const val"
+                "Int is a type that represents an integer, one of the many numerical types that can be represented in Kotlin. Similar to other languages, you can also use Byte, Short, Long, Float, and Double depending on your numerical data",
+                "Some values are not meant to be changed, though. Consider a String called languageName. If you want to ensure that languageName always holds a value of Kotlin, then you can declare languageName using the val keyword"
             ),
         ),
         Book(

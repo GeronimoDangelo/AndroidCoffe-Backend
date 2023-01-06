@@ -26,26 +26,14 @@ class BookRepositoryImpl : BookRepository {
             level = "Beginner",
             timeToLearn = "Fast",
             tags = listOf(
-                "val",
-                "var",
-                "const val",
-                "private val",
-                "private var"
+                "val, var, private val, private var, const val"
             ),
         ),
         Book(
             id = 2,
             name = "Coroutines",
             image = "/images/coroutines.png",
-            about = "A coroutine is a concurrency design pattern that you can use on Android to simplify code that executes asynchronously." +
-                    "For example: " +
-                    "fun main() = runBlocking {" +
-                    "   launch {" +
-                    "       delay(1000)" +
-                    "       println('World')" +
-                    "     }" +
-                    "   println('Hello')" +
-                    "In this case, we first start running the block and after 1 second it's going to say 'World', meanwhile the coroutine scope is running the code below ('Hello') is printing first and 1 second later the 'World'",
+            about = "A coroutine is an instance of suspendable computation. It is conceptually similar to a thread, in the sense that it takes a block of code to run that works concurrently with the rest of the code. However, a coroutine is not bound to any particular thread. It may suspend its execution in one thread and resume in another one.",
 
             rating = 5.0,
             level = "Oct",

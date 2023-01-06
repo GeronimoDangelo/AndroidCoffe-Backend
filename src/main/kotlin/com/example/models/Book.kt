@@ -9,7 +9,7 @@ data class Book(
     val image: String,
     val about: String,
     val rating: Double,
-    val month: String,
-    val day: String,
+    val level: String,
+    val timeToLearn: String,
     val tags: List<String>,
     )

@@ -67,7 +67,7 @@ class BookRepositoryImpl : BookRepository {
             image = "/images/sealed_clases.png",
             about = "Sealed classes and interfaces represent restricted class hierarchies that provide more control over inheritance. All direct subclasses of a sealed class are known at compile time. No other subclasses may appear outside a module within which the sealed class is defined.",
             rating = 2.5,
-            level = "Beginner - Intermediate",
+            level = "Intermediate",
             timeToLearn = "Fast",
             tags = listOf(
                 "For example, third-party clients can't extend your sealed class in their code. Thus, each instance of a sealed class has a type from a limited set that is known when this class is compiled.",
@@ -142,7 +142,7 @@ class BookRepositoryImpl : BookRepository {
             image = "/images/objects.png",
             about = "Sometimes you need to create an object that is a slight modification of some class, without explicitly declaring a new subclass for it. Kotlin can handle this with object expressions and object declarations.",
             rating = 3.5,
-            level = "Beginner - Intermediate",
+            level = "Beginner",
             timeToLearn = "Fast",
             tags = listOf(
                 "Object expressions create objects of anonymous classes, that is, classes that aren't explicitly declared with the class declaration. Such classes are useful for one-time use. You can define them from scratch, inherit from existing classes, or implement interfaces. Instances of anonymous classes are also called anonymous objects because they are defined by an expression, not a name.",

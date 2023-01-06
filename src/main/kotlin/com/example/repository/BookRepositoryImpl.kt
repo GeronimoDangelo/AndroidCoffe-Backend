@@ -26,11 +26,11 @@ class BookRepositoryImpl : BookRepository {
             level = "Beginner",
             timeToLearn = "Fast",
             tags = listOf(
-                "val,",
-                "var,",
-                "const val,",
-                "private val,",
-                "private var."
+                "val",
+                "var",
+                "const val",
+                "private val",
+                "private var"
             ),
         ),
         Book(

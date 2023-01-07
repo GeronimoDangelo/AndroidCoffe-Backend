@@ -1,7 +1,6 @@
 package com.example.repository
 
 import com.example.models.ApiResponse
-import com.example.models.Book
 import com.example.models.Jetpack
 
 class JetpackRepositoryImpl : JetpackRepository {
@@ -16,7 +15,7 @@ class JetpackRepositoryImpl : JetpackRepository {
 
     override val page1 = listOf(
         Jetpack(
-            id = 1,
+            id = 10,
             name = "Jetpack",
             image = "/images/variables.png",
             about = "Composable functions are the building blocks used to create user interfaces for Android apps when developing with Jetpack Compose. In the ComposeDemo project created earlier in the book, we made use of both the built-in compose functions provided with Compose and also created our own functions.",
@@ -29,7 +28,7 @@ class JetpackRepositoryImpl : JetpackRepository {
             ),
         ),
         Jetpack(
-            id = 2,
+            id = 11,
             name = "JEt",
             image = "/images/variables.png",
             about = "Kotlin uses two different keywords to declare variables ( val and var). Use val for a variable whose value never changes. You can't reassign a value to a variable that was declared using val. And you can use var for a variable whose value can change.",
@@ -43,7 +42,7 @@ class JetpackRepositoryImpl : JetpackRepository {
             ),
         ),
         Jetpack(
-            id = 3,
+            id = 12,
             name = "13123",
             image = "/images/variables.png",
             about = "Kotlin uses two different keywords to declare variables ( val and var). Use val for a variable whose value never changes. You can't reassign a value to a variable that was declared using val. And you can use var for a variable whose value can change.",
@@ -61,7 +60,7 @@ class JetpackRepositoryImpl : JetpackRepository {
 
     override val page2 = listOf(
         Jetpack(
-            id = 4,
+            id = 13,
             name = "diego",
             image = "/images/variables.png",
             about = "Kotlin uses two different keywords to declare variables ( val and var). Use val for a variable whose value never changes. You can't reassign a value to a variable that was declared using val. And you can use var for a variable whose value can change.",
@@ -74,7 +73,7 @@ class JetpackRepositoryImpl : JetpackRepository {
             ),
         ),
         Jetpack(
-            id = 5,
+            id = 14,
             name = "japon",
             image = "/images/variables.png",
             about = "Kotlin uses two different keywords to declare variables ( val and var). Use val for a variable whose value never changes. You can't reassign a value to a variable that was declared using val. And you can use var for a variable whose value can change.",
@@ -87,7 +86,7 @@ class JetpackRepositoryImpl : JetpackRepository {
             ),
         ),
         Jetpack(
-            id = 6,
+            id = 15,
             name = "rusia",
             image = "/images/variables.png",
             about = "Kotlin uses two different keywords to declare variables ( val and var). Use val for a variable whose value never changes. You can't reassign a value to a variable that was declared using val. And you can use var for a variable whose value can change.",
@@ -105,7 +104,7 @@ class JetpackRepositoryImpl : JetpackRepository {
 
     override val page3 = listOf(
         Jetpack(
-            id = 7,
+            id = 16,
             name = "europa",
             image = "/images/variables.png",
             about = "Kotlin uses two different keywords to declare variables ( val and var). Use val for a variable whose value never changes. You can't reassign a value to a variable that was declared using val. And you can use var for a variable whose value can change.",
@@ -118,7 +117,7 @@ class JetpackRepositoryImpl : JetpackRepository {
             ),
         ),
         Jetpack(
-            id = 8,
+            id = 17,
             name = "2023",
             image = "/images/variables.png",
             about = "Kotlin uses two different keywords to declare variables ( val and var). Use val for a variable whose value never changes. You can't reassign a value to a variable that was declared using val. And you can use var for a variable whose value can change.",
@@ -131,7 +130,7 @@ class JetpackRepositoryImpl : JetpackRepository {
             ),
         ),
         Jetpack(
-            id = 9,
+            id = 18,
             name = "estonia",
             image = "/images/variables.png",
             about = "Kotlin uses two different keywords to declare variables ( val and var). Use val for a variable whose value never changes. You can't reassign a value to a variable that was declared using val. And you can use var for a variable whose value can change.",

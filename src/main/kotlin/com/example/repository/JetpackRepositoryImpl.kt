@@ -17,7 +17,7 @@ class JetpackRepositoryImpl : JetpackRepository {
         Jetpack(
             id = 1,
             name = "Jetpack",
-            image = "/images/variables.png",
+            image = "/images/composable.png",
             about = "Composable functions are the building blocks used to create user interfaces for Android apps when developing with Jetpack Compose. In the ComposeDemo project created earlier in the book, we made use of both the built-in compose functions provided with Compose and also created our own functions.",
             rating = 0.5,
             level = "Beginner",
@@ -29,8 +29,8 @@ class JetpackRepositoryImpl : JetpackRepository {
         ),
         Jetpack(
             id = 2,
-            name = "JEt",
-            image = "/images/variables.png",
+            name = "Lazy Column",
+            image = "/images/lazycolumn.png",
             about = "Kotlin uses two different keywords to declare variables ( val and var). Use val for a variable whose value never changes. You can't reassign a value to a variable that was declared using val. And you can use var for a variable whose value can change.",
             rating = 0.5,
             level = "Beginner",

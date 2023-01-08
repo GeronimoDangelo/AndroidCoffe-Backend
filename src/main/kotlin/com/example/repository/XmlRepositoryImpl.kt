@@ -1,9 +1,10 @@
 package com.example.repository
 
 import com.example.models.ApiResponse
+import com.example.models.Jetpack
 import com.example.models.Xml
 
-class XmlRepositoryImpl: XmlRepository {
+class XmlRepositoryImpl : XmlRepository {
     override val xmls: Map<Int, List<Xml>> by lazy {
         mapOf(
             1 to page1,
@@ -35,7 +36,7 @@ class XmlRepositoryImpl: XmlRepository {
             level = "Beginner",
             timeToLearn = "Fast",
             tags = listOf(
-                        "RecyclerView that as its name says, recycles the view, this means that once the view is off the screen, RecyclerView will reuse the items. On other hand ListView mush be  used when we have a small list of items because more items we have, the more elements we need to create when the user scrolls up/down the list and it’s more inefficient"
+                "RecyclerView that as its name says, recycles the view, this means that once the view is off the screen, RecyclerView will reuse the items. On other hand ListView mush be  used when we have a small list of items because more items we have, the more elements we need to create when the user scrolls up/down the list and it’s more inefficient"
             ),
         ),
         Xml(
@@ -47,7 +48,7 @@ class XmlRepositoryImpl: XmlRepository {
             level = "Beginner",
             timeToLearn = "Medium",
             tags = listOf(
-               "In the onCreate() method, you perform basic application startup logic that should happen only once for the entire life of the activity",
+                "In the onCreate() method, you perform basic application startup logic that should happen only once for the entire life of the activity",
                 "The onStart() call makes the activity visible to the user, as the app prepares for the activity to enter the foreground and become interactive",
                 "When the activity enters the Resumed state, it comes to the foreground, and then the system invokes the onResume() callback.",
                 "On pause() , the system calls this method as the first indication that the user is leaving your activity ,it indicates that the activity is no longer in the foreground",
@@ -67,7 +68,7 @@ class XmlRepositoryImpl: XmlRepository {
             level = "Beginner",
             timeToLearn = "Medium",
             tags = listOf(
-             "The fragment’s layout, lifecycle, and input events are managed and defined by themselves. The interaction between fragment objects is managed by the fragment manager class.",
+                "The fragment’s layout, lifecycle, and input events are managed and defined by themselves. The interaction between fragment objects is managed by the fragment manager class.",
                 "The main difference between fragment and activity lifecycles is that activity creates only one view for the entire lifetime but fragment views can be recreated and even dynamically changed during the lifetime."
             )
         ),
@@ -80,7 +81,7 @@ class XmlRepositoryImpl: XmlRepository {
             level = "Beginner",
             timeToLearn = "Fast",
             tags = listOf(
-               "Generally, FrameLayout should be used to hold a single child view, because it can be difficult to organize child views in a way that's scalable to different screen sizes without the children overlapping each other."
+                "Generally, FrameLayout should be used to hold a single child view, because it can be difficult to organize child views in a way that's scalable to different screen sizes without the children overlapping each other."
             )
         ),
         Xml(
@@ -92,9 +93,9 @@ class XmlRepositoryImpl: XmlRepository {
             level = "Intermediate",
             timeToLearn = "Fast",
             tags = listOf(
-              "The intent is used to launch an activity, start the services, broadcast receivers, display a web page, dial a phone call, send messages from one activity to another activity, and so on.",
-                        "There are 2 types of intent:",
-              "-Explicit intents are communicated between two activities inside the same application. We can use explicit intents when we need to move from one activity to another activity.",
+                "The intent is used to launch an activity, start the services, broadcast receivers, display a web page, dial a phone call, send messages from one activity to another activity, and so on.",
+                "There are 2 types of intent:",
+                "-Explicit intents are communicated between two activities inside the same application. We can use explicit intents when we need to move from one activity to another activity.",
                 "-Implicit intent is communicated between two activities of an application"
             )
         )
@@ -110,9 +111,9 @@ class XmlRepositoryImpl: XmlRepository {
             level = "Beginner",
             timeToLearn = "Fast",
             tags = listOf(
-              "Once view binding is enabled in a module, it generates a binding class for each XML layout file present in that module",
-              "An instance of a binding class contains direct references to all views that have an ID in the corresponding layout",
-              "In most cases, view binding replaces findViewById"
+                "Once view binding is enabled in a module, it generates a binding class for each XML layout file present in that module",
+                "An instance of a binding class contains direct references to all views that have an ID in the corresponding layout",
+                "In most cases, view binding replaces findViewById"
             )
         ),
         Xml(
@@ -137,7 +138,7 @@ class XmlRepositoryImpl: XmlRepository {
             level = "Advanced",
             timeToLearn = "Long",
             tags = listOf(
-               "Create a Preferences DataStore",
+                "Create a Preferences DataStore",
                 "",
                 "Use the property delegate created by preferencesDataStore to create an instance of Datastore<Preferences>. Call it once at the top level of your kotlin file, and access it through this property throughout the rest of your application.",
                 "",
@@ -151,10 +152,43 @@ class XmlRepositoryImpl: XmlRepository {
 
 
     override suspend fun getAllXmls(page: Int): ApiResponse {
-        TODO("Not yet implemented")
+        return ApiResponse(
+            success = true,
+            message = "ok",
+            prevPage = calculatePage(page = page)[PREVIOUS_PAGE_KEY],
+            nextPage = calculatePage(page = page)[NEXT_PAGE_KEY],
+            xml = xmls[page]!!,
+            lastUpdated = System.currentTimeMillis()
+        )
     }
 
     override suspend fun searchXml(name: String?): ApiResponse {
-        TODO("Not yet implemented")
+        return ApiResponse(
+            success = true,
+            message = "ok",
+            xml = findXml(query = name)
+        )
+    }
+
+    private fun calculatePage(page: Int) =
+        mapOf(
+            PREVIOUS_PAGE_KEY to if (page in 2..3) page.minus(1) else null,
+            NEXT_PAGE_KEY to if (page in 1..2) page.plus(1) else null
+        )
+
+    private fun findXml(query: String?): List<Xml> {
+        val founded = mutableListOf<Xml>()
+        return if (!query.isNullOrEmpty()) {
+            xmls.forEach { (_, heroes) ->
+                heroes.forEach { hero ->
+                    if (hero.name.lowercase().contains(query.lowercase())) {
+                        founded.add(hero)
+                    }
+                }
+            }
+            founded
+        } else {
+            emptyList()
+        }
     }
 }

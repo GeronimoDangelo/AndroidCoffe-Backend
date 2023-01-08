@@ -12,6 +12,8 @@ fun Application.configureRouting() {
         searchBooks()
         getAllJetpacks()
         searchJetpack()
+        getAllXmls()
+        searchXml()
 
         static("/images") {
             resources("images")

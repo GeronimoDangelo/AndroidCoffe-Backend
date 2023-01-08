@@ -10,5 +10,6 @@ data class ApiResponse(
     val nextPage: Int? = null,
     val books: List<Book> = emptyList(),
     val jetpacks: List<Jetpack> = emptyList(),
+    val xml: List<Xml> = emptyList(),
     val lastUpdated: Long? = null
 )

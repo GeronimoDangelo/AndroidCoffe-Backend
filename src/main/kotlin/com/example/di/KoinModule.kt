@@ -1,9 +1,6 @@
 package com.example.di
 
-import com.example.repository.BookRepository
-import com.example.repository.BookRepositoryImpl
-import com.example.repository.JetpackRepository
-import com.example.repository.JetpackRepositoryImpl
+import com.example.repository.*
 import org.koin.dsl.module
 
 val koinModule = module {
@@ -12,5 +9,9 @@ val koinModule = module {
     }
     single<JetpackRepository> {
         JetpackRepositoryImpl()
+    }
+
+    single<XmlRepository> {
+        XmlRepositoryImpl()
     }
 }

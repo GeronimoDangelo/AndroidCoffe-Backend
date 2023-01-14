@@ -162,6 +162,13 @@ class XmlRepositoryImpl : XmlRepository {
         )
     }
 
+    private fun calculatePage(page: Int) =
+        mapOf(
+            PREVIOUS_PAGE_KEY to if (page in 2..3) page.minus(1) else null,
+            NEXT_PAGE_KEY to if (page in 1..2) page.plus(1) else null
+        )
+
+
     override suspend fun searchXml(name: String?): ApiResponse {
         return ApiResponse(
             success = true,
@@ -170,11 +177,7 @@ class XmlRepositoryImpl : XmlRepository {
         )
     }
 
-    private fun calculatePage(page: Int) =
-        mapOf(
-            PREVIOUS_PAGE_KEY to if (page in 2..3) page.minus(1) else null,
-            NEXT_PAGE_KEY to if (page in 1..2) page.plus(1) else null
-        )
+
 
     private fun findXml(query: String?): List<Xml> {
         val founded = mutableListOf<Xml>()

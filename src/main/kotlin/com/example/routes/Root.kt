@@ -8,7 +8,7 @@ import io.ktor.server.routing.*
 fun Route.root() {
     get("/"){
         call.respond(
-            message = "Welcome to My Android Book API!",
+            message = "Welcome to My Android Coffee API! by TwiTech",
             status = HttpStatusCode.OK
         )
     }
